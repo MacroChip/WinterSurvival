@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526980366}
-  m_IndirectSpecularColor: {r: 0.2850267, g: 0.37139326, b: 0.49601004, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.4960094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1935,6 +1935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sprintFOV
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114317455535621936, guid: d46c81fde8881ed44913f6aaa6f5bd75,
+        type: 3}
+      propertyPath: zoomIntensity
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 20768807671117420, guid: d46c81fde8881ed44913f6aaa6f5bd75,
         type: 3}
