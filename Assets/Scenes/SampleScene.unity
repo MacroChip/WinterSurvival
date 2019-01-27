@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526980366}
-  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.4960094, a: 1}
+  m_IndirectSpecularColor: {r: 0.2850267, g: 0.37139326, b: 0.49601004, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1344,6 +1344,37 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c15ba340f687484096437343620ee65, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee8ee11e81be1954aa02970f7585ba9e, type: 3}
+--- !u!1 &495175224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ee8ee11e81be1954aa02970f7585ba9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 495175223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &495175225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495175224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9b46cdb7aa12f4bac81027ab8c3eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &495175229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495175224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 146.85286, y: 282.56, z: 149.81944}
+  m_Center: {x: 68.68066, y: 34.43491, z: -1.3869629}
 --- !u!4 &499642590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
@@ -1794,6 +1825,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+--- !u!1 &660074654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1070759060988834, guid: d46c81fde8881ed44913f6aaa6f5bd75,
+    type: 3}
+  m_PrefabInstance: {fileID: 733788491}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &660074655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aea5a34958c1e147b246073e44033fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+--- !u!65 &660074658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
