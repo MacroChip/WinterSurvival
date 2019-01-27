@@ -1941,6 +1941,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wood: 0
   woodText: {fileID: 2103087629}
+--- !u!114 &660074656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0edeba65520cff4f8c373b2a427ea39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blizzard: {fileID: 2038967512}
 --- !u!65 &660074658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2840,6 +2853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenCabinFbx
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1a35ea44f9c30fc46a7023431136cabd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1a35ea44f9c30fc46a7023431136cabd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 250
@@ -3435,6 +3452,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+--- !u!1 &1357035611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 1a35ea44f9c30fc46a7023431136cabd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1106289556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1357035613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357035611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.75}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!4 &1384462954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
@@ -4968,6 +5004,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+--- !u!1 &2038967512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1549212412125488, guid: 17504871f215feb46b405f6f12366160,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135622859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2103087627
 GameObject:
   m_ObjectHideFlags: 0
