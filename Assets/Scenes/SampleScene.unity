@@ -2410,6 +2410,7 @@ GameObject:
   - component: {fileID: 808780513}
   - component: {fileID: 808780514}
   - component: {fileID: 808780515}
+  - component: {fileID: 808780516}
   m_Layer: 0
   m_Name: sparkle
   m_TagString: Untagged
@@ -2426,7 +2427,7 @@ Transform:
   m_GameObject: {fileID: 808780512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 422.8, y: 50, z: 417.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -2489,6 +2490,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d622ae535cbc59f4d9ee14a84c19dba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &808780516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808780512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a374f6c571c814295f2a87a5de85da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &827430354 stripped
