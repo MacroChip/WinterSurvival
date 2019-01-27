@@ -24,7 +24,7 @@ public class ResourceInventory : MonoBehaviour
 
     private void UpdateWoodUI()
     {
-        woodText.SetText(wood + " wood");
+        woodText.SetText(wood + " carried wood");
     }
 
     public int GetWood()
