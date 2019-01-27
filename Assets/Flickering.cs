@@ -12,7 +12,16 @@ public class Flickering : MonoBehaviour
 
     private void ChangeState()
     {
-        gameObject.SetActive(!gameObject.active);
-        Invoke("ChangeState", Random.Range(1, 3));
+        bool newState = !gameObject.active;
+        gameObject.SetActive(newState);
+        float delay;
+        if (newState)
+        {
+            delay = Random.Range(3, 8);
+        } else
+        {
+            delay = Random.Range(0.1f, 0.4f);
+        }
+        Invoke("ChangeState", delay);
     }
 }
