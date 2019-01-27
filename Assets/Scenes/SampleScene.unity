@@ -5034,7 +5034,7 @@ GameObject:
   - component: {fileID: 2103087630}
   - component: {fileID: 2103087629}
   m_Layer: 0
-  m_Name: TextMeshPro Text
+  m_Name: Wood count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
