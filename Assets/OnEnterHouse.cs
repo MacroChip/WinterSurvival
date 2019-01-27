@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnOffSnow : MonoBehaviour
+public class OnEnterHouse : MonoBehaviour
 {
     private const string cabin = "WoodenCabinFbx";
 
@@ -13,6 +13,8 @@ public class TurnOffSnow : MonoBehaviour
         if (other.name.Equals(cabin))
         {
             blizzard.SetActive(false);
+            gameObject.GetComponent<GlobalInventory>().DepositResources(gameObject.GetComponent<ResourceInventory>());
+
         }
     }
 

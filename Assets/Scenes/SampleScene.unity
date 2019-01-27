@@ -1939,7 +1939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aea5a34958c1e147b246073e44033fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 0
   woodText: {fileID: 2103087629}
 --- !u!114 &660074656
 MonoBehaviour:
@@ -1967,6 +1966,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &660074661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263580adfcbef004291db3376812e49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
