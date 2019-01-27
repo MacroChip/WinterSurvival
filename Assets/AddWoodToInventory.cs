@@ -9,7 +9,7 @@ public class AddWoodToInventory : MonoBehaviour
         if (other is CharacterController)
         {
             Debug.Log("character gathered wood");
-            other.GetComponent<ResourceInventory>().wood++;
+            other.GetComponent<ResourceInventory>().IncrementWood();
             Destroy(gameObject);
         }
     }

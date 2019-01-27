@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class ResourceInventory : MonoBehaviour
 {
 
     public int wood = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TMPro.TMP_Text woodText;
 
-    // Update is called once per frame
-    void Update()
+    public void IncrementWood()
     {
-        
+        wood++;
+        woodText.SetText(wood + " wood");
     }
 }
