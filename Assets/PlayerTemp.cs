@@ -9,27 +9,21 @@ public class PlayerTemp : MonoBehaviour
     public float currentTemp;                                   // The current temperature the player has.
     public Slider tempGauge;                                    // Reference to the UI's temperature bar.
     public Image coldImage;                                     // Reference to an image to constrict vision as temperature decreases.
-    public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
-    public Color flashColour = new Color(0f, 0f, 1f, 0.1f);     // The color the damageImage is set to, to flash.
-
-    public Image visionState; 
-
 
     AudioSource playerAudio;                                    // Reference to the AudioSource component.
     bool isFrozen;                                              // Whether the player is frozen.
-    bool colder;                                                // True when the player gets colder.
+    bool temperatureChanged;
+    private readonly float WARMING_TEMPERATURE = 0.5f;
 
     void Start()
     {
         NewDay();
-        InvokeRepeating("LowerTemp", 10, 10);
+        InvokeRepeating("ChangeTemp", 10, 10);
     }
 
     void NewDay()
     {
-        // Setting up the references.
         playerAudio = GetComponent<AudioSource>();
-        // Set the initial health of the player.
         currentTemp = startingTemp;
     }
 
@@ -41,60 +35,62 @@ public class PlayerTemp : MonoBehaviour
     void Update()
     {
         Sprite sprite = null;
-        //If the player is outside...
-        if (colder && currentTemp < 98 &&  currentTemp > 97.66f)
+        if (temperatureChanged && currentTemp >= 98)
+        {
+            Debug.Log("nulling out vision constriction sprite");
+            coldImage.sprite = null;
+            coldImage.color = new Color(255, 255, 255, 0);
+        }
+        if (temperatureChanged && currentTemp < 98 &&  currentTemp > 97.66f)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage1");
         }
-        else if (colder && currentTemp < 97.67 && currentTemp > 97.33f)
+        else if (temperatureChanged && currentTemp < 97.67 && currentTemp > 97.33f)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage2");
         }
-        else if (colder && currentTemp < 97.67 && currentTemp > 97.33f)
+        else if (temperatureChanged && currentTemp < 97.67 && currentTemp > 97.33f)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage3");
         }
-        else if (colder && currentTemp < 97.34 && currentTemp > 97)
+        else if (temperatureChanged && currentTemp < 97.34 && currentTemp > 97)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage4");
         }
-        else if (colder && currentTemp < 97 && currentTemp > 96.66f)
+        else if (temperatureChanged && currentTemp < 97 && currentTemp > 96.66f)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage5");
         }
-        else if (colder && currentTemp < 96.67f && currentTemp > 96.33f)
+        else if (temperatureChanged && currentTemp < 96.67f && currentTemp > 96.33f)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage6");
         }
-        else if (colder && currentTemp < 96.34f && currentTemp > 96)
+        else if (temperatureChanged && currentTemp < 96.34f && currentTemp > 96)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage7");
         }
-        else if (colder && currentTemp < 96 && currentTemp > 95.66f)
+        else if (temperatureChanged && currentTemp < 96 && currentTemp > 95.66f)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage8");
         }
-        else if (colder && currentTemp < 95.67f && currentTemp > 95)
+        else if (temperatureChanged && currentTemp < 95.67f && currentTemp > 95)
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage9");
         }
         if (sprite)
         {
-            Debug.Log("setting sprite to " + sprite.name);
+            Debug.Log("setting vision constriction sprite to " + sprite.name);
             coldImage.sprite = sprite;
             coldImage.color = new Color(255, 255, 255, 255);
         }
-        // Reset the colder flag.
-        colder = false;
+        temperatureChanged = false;
     }
 
-    public void LowerTemp()
+    public void ChangeTemp()
     {
         if (!GetComponent<OnEnterHouse>().IsInHouse())
         {
             float airTemp = .083f;
-
-            colder = true;
 
             currentTemp -= airTemp;
 
@@ -110,7 +106,12 @@ public class PlayerTemp : MonoBehaviour
                 // ... it should freeze.
                 Freeze();
             }
+        } else
+        {
+            currentTemp = System.Math.Min(startingTemp, currentTemp + WARMING_TEMPERATURE);
+            tempGauge.value = currentTemp;
         }
+        temperatureChanged = true;
     }
 
 
