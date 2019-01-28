@@ -38,20 +38,55 @@ public class PlayerTemp : MonoBehaviour
         currentTemp = 97;
     }
 
-    /*void Update()
+    void Update()
     {
-        // If the player is outside...
-        if (colder && currentTemp < 100)
+        Sprite sprite = null;
+        //If the player is outside...
+        if (colder && currentTemp < 98 &&  currentTemp > 97.66f)
         {
-            Debug.Log("works lmao");
-            Sprite sprite = Resources.Load<Sprite>("VisionStages/Stage1");
-            Debug.Log(sprite);
-            //visionState.sprite = sprite;
+            sprite = Resources.Load<Sprite>("VisionStages/Stage1");
+        }
+        else if (colder && currentTemp < 97.67 && currentTemp > 97.33f)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage2");
+        }
+        else if (colder && currentTemp < 97.67 && currentTemp > 97.33f)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage3");
+        }
+        else if (colder && currentTemp < 97.34 && currentTemp > 97)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage4");
+        }
+        else if (colder && currentTemp < 97 && currentTemp > 96.66f)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage5");
+        }
+        else if (colder && currentTemp < 96.67f && currentTemp > 96.33f)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage6");
+        }
+        else if (colder && currentTemp < 96.34f && currentTemp > 96)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage7");
+        }
+        else if (colder && currentTemp < 96 && currentTemp > 95.66f)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage8");
+        }
+        else if (colder && currentTemp < 95.67f && currentTemp > 95)
+        {
+            sprite = Resources.Load<Sprite>("VisionStages/Stage9");
+        }
+        if (sprite)
+        {
+            Debug.Log("setting sprite to " + sprite.name);
+            coldImage.sprite = sprite;
+            coldImage.color = new Color(255, 255, 255, 255);
         }
         // Reset the colder flag.
         colder = false;
     }
-    */
 
     public void LowerTemp()
     {
@@ -70,7 +105,7 @@ public class PlayerTemp : MonoBehaviour
             //playerAudio.Play();
 
             // If the player has frozen and the frozen flag hasn't been set yet...
-            if (currentTemp <= 0 && !isFrozen)
+            if (currentTemp <= 95 && !isFrozen)
             {
                 // ... it should freeze.
                 Freeze();
