@@ -78,8 +78,13 @@ public class PlayerTemp : MonoBehaviour
         {
             sprite = Resources.Load<Sprite>("VisionStages/Stage9");
         }
+        if (sprite)
+        {
+            Debug.Log("setting sprite to " + sprite.name);
+            coldImage.sprite = sprite;
+            coldImage.color = new Color(255, 255, 255, 255);
+        }
         // Reset the colder flag.
-        coldImage.sprite = sprite;
         colder = false;
     }
 
