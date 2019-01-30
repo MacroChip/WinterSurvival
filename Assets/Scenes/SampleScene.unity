@@ -1598,7 +1598,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: ee8ee11e81be1954aa02970f7585ba9e, type: 3}
       propertyPath: m_Name
-      value: kutuks
+      value: wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ee8ee11e81be1954aa02970f7585ba9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1668,18 +1668,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 495175223}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &495175225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495175224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9b46cdb7aa12f4bac81027ab8c3eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &495175229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2196,6 +2184,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blizzard: {fileID: 2038967512}
   isInHouse: 0
+--- !u!114 &660074657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9b46cdb7aa12f4bac81027ab8c3eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: {fileID: 2139282499}
 --- !u!65 &660074658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2239,9 +2240,6 @@ MonoBehaviour:
   currentTemp: 0
   tempGauge: {fileID: 2089007865}
   coldImage: {fileID: 1215630879}
-  flashSpeed: 5
-  flashColour: {r: 0, g: 0, b: 1, a: 0.1}
-  visionState: {fileID: 0}
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,

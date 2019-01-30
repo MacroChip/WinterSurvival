@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class AddWoodToInventory : MonoBehaviour
 {
+    public GameObject wood;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other is CharacterController)
+        Transform parent = other.gameObject.transform.parent;
+        if (parent)
         {
-            Debug.Log("character gathered wood");
-            other.GetComponent<ResourceInventory>().IncrementWood();
-            Destroy(gameObject);
+            GameObject realWood = parent.gameObject;
+            Debug.Log(realWood.name);
+            if (realWood.name == (wood.name + "(Clone)"))
+            {
+                Debug.Log("character gathered wood");
+                GetComponent<ResourceInventory>().IncrementWood();
+                Destroy(realWood);
+            }
         }
     }
 }
