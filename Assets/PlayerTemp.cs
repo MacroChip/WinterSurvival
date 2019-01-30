@@ -13,7 +13,7 @@ public class PlayerTemp : MonoBehaviour
     AudioSource playerAudio;                                    // Reference to the AudioSource component.
     bool isFrozen;                                              // Whether the player is frozen.
     bool temperatureChanged;
-    private readonly float WARMING_TEMPERATURE = 0.5f;
+    private const float WARMING_TEMPERATURE = 0.5f;
 
     void Start()
     {
