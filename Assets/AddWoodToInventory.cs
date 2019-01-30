@@ -8,17 +8,11 @@ public class AddWoodToInventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Transform parent = other.gameObject.transform.parent;
-        if (parent)
+        if (other.name == (wood.name + "(Clone)"))
         {
-            GameObject realWood = parent.gameObject;
-            Debug.Log(realWood.name);
-            if (realWood.name == (wood.name + "(Clone)"))
-            {
-                Debug.Log("character gathered wood");
-                GetComponent<ResourceInventory>().IncrementWood();
-                Destroy(realWood);
-            }
+            Debug.Log("character gathered wood");
+            GetComponent<ResourceInventory>().IncrementWood();
+            Destroy(other.gameObject);
         }
     }
 }
