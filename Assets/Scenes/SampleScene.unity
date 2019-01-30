@@ -5113,7 +5113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33d917fa0c75dc4d8db9a694006ff3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodToSpawn: {fileID: 2139282499}
+  resourceToSpawn: {fileID: 2139282499}
   spawnRate: 30
 --- !u!4 &1746113308
 Transform:
