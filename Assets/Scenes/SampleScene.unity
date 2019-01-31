@@ -5441,6 +5441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceToSpawn: {fileID: 2139282499}
   spawnRate: 30
+  initialSpawnedCount: 250
 --- !u!4 &1746113308
 Transform:
   m_ObjectHideFlags: 0

@@ -6,12 +6,17 @@ public class ResourceSpawner : MonoBehaviour
 {
     public GameObject resourceToSpawn;
     private TerrainData terrainData;
-    public int spawnRate;
+    public float spawnRate;
+    public int initialSpawnedCount;
 
     void Start()
     {
         GameObject terrainObject = GameObject.Find("Terrain");
         terrainData = terrainObject.GetComponent<Terrain>().terrainData;
+        for (int i = 0; i < initialSpawnedCount; i++)
+        {
+            SpawnResource();
+        }
         InvokeRepeating("SpawnResource", 0f, spawnRate);
     }
 
