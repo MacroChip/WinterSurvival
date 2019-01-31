@@ -17,6 +17,12 @@ public class GlobalInventory : MonoBehaviour
         Debug.Log("Deposited " + newWoodCount + " wood to the global inventory");
     }
 
+    internal void DecrementWood(int numberOfWoodBurnedPerTick)
+    {
+        wood -= numberOfWoodBurnedPerTick;
+        UpdateStoredWoodUI();
+    }
+
     private void UpdateStoredWoodUI()
     {
         storedWoodText.SetText(wood + " stored wood");
