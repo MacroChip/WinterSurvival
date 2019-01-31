@@ -88,7 +88,11 @@ public class PlayerTemp : MonoBehaviour
 
     public void ChangeTemp()
     {
-        if (!GetComponent<OnEnterHouse>().IsInHouse())
+        if (GetComponent<OnEnterHouse>().IsInHouse())
+        {
+            currentTemp = System.Math.Min(startingTemp, currentTemp + WARMING_TEMPERATURE);
+            tempGauge.value = currentTemp;
+        } else
         {
             float airTemp = .083f;
 
@@ -106,10 +110,6 @@ public class PlayerTemp : MonoBehaviour
                 // ... it should freeze.
                 Freeze();
             }
-        } else
-        {
-            currentTemp = System.Math.Min(startingTemp, currentTemp + WARMING_TEMPERATURE);
-            tempGauge.value = currentTemp;
         }
         temperatureChanged = true;
     }
