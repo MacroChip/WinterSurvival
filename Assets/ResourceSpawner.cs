@@ -5,9 +5,12 @@ using UnityEngine;
 public class ResourceSpawner : MonoBehaviour
 {
     public GameObject resourceToSpawn;
-    private TerrainData terrainData;
     public float spawnRate;
     public int initialSpawnedCount;
+    public int maximumNumberOfResourcesInTheWorldAtOnce;
+
+    private TerrainData terrainData;
+    private int numberOfResourcesInWorld;
 
     void Start()
     {
@@ -22,8 +25,12 @@ public class ResourceSpawner : MonoBehaviour
 
     void SpawnResource()
     {
-        Vector3 position = new Vector3(Random.Range(0f, terrainData.size.x), 0.1f, Random.Range(0f, terrainData.size.z));
-        Debug.Log($"spawning {resourceToSpawn.name} at " + position.ToString());
-        Instantiate(resourceToSpawn, position, Quaternion.identity);
+        if (numberOfResourcesInWorld < maximumNumberOfResourcesInTheWorldAtOnce)
+        {
+            Vector3 position = new Vector3(Random.Range(0f, terrainData.size.x), 0.1f, Random.Range(0f, terrainData.size.z));
+            Debug.Log($"spawning {resourceToSpawn.name} at " + position.ToString());
+            Instantiate(resourceToSpawn, position, Quaternion.identity);
+            numberOfResourcesInWorld++;
+        }
     }
 }

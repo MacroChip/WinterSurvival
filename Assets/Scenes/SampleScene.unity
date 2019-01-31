@@ -5442,6 +5442,7 @@ MonoBehaviour:
   resourceToSpawn: {fileID: 2139282499}
   spawnRate: 30
   initialSpawnedCount: 250
+  maximumNumberOfResourcesInTheWorldAtOnce: 500
 --- !u!4 &1746113308
 Transform:
   m_ObjectHideFlags: 0
