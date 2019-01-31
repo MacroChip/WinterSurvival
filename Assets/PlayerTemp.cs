@@ -6,6 +6,7 @@ using System.Collections;
 public class PlayerTemp : MonoBehaviour
 {
     public float startingTemp = 100;                            // The temperature the player starts the game with.
+    public float MAXIMUM_TEMP = 100;
     public float currentTemp;                                   // The current temperature the player has.
     public Slider tempGauge;                                    // Reference to the UI's temperature bar.
     public Image coldImage;                                     // Reference to an image to constrict vision as temperature decreases.
@@ -90,7 +91,7 @@ public class PlayerTemp : MonoBehaviour
     {
         if (GetComponent<OnEnterHouse>().IsInHouse())
         {
-            currentTemp = System.Math.Min(startingTemp, currentTemp + WARMING_TEMPERATURE);
+            currentTemp = System.Math.Min(MAXIMUM_TEMP, currentTemp + WARMING_TEMPERATURE);
             tempGauge.value = currentTemp;
         } else
         {
