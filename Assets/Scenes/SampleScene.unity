@@ -2357,9 +2357,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingTemp: 100
+  MAXIMUM_TEMP: 100
   currentTemp: 0
   tempGauge: {fileID: 2089007865}
   coldImage: {fileID: 1215630879}
+  woodBurning: {fileID: 0}
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
@@ -3798,7 +3800,7 @@ GameObject:
   - component: {fileID: 1162878753}
   - component: {fileID: 1162878752}
   m_Layer: 0
-  m_Name: WoodConsumer
+  m_Name: WoodBurning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,6 +10,7 @@ public class PlayerTemp : MonoBehaviour
     public float currentTemp;                                   // The current temperature the player has.
     public Slider tempGauge;                                    // Reference to the UI's temperature bar.
     public Image coldImage;                                     // Reference to an image to constrict vision as temperature decreases.
+    public WoodBurning woodBurning;
 
     AudioSource playerAudio;                                    // Reference to the AudioSource component.
     bool isFrozen;                                              // Whether the player is frozen.
@@ -89,7 +90,7 @@ public class PlayerTemp : MonoBehaviour
 
     public void ChangeTemp()
     {
-        if (GetComponent<OnEnterHouse>().IsInHouse())
+        if (GetComponent<OnEnterHouse>().IsInHouse() && woodBurning.IsLit())
         {
             currentTemp = System.Math.Min(MAXIMUM_TEMP, currentTemp + WARMING_TEMPERATURE);
             tempGauge.value = currentTemp;
