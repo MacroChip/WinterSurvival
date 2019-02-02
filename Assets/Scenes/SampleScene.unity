@@ -2361,7 +2361,7 @@ MonoBehaviour:
   currentTemp: 0
   tempGauge: {fileID: 2089007865}
   coldImage: {fileID: 1215630879}
-  woodBurning: {fileID: 0}
+  woodBurning: {fileID: 1162878752}
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
