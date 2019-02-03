@@ -2362,6 +2362,20 @@ MonoBehaviour:
   tempGauge: {fileID: 2089007865}
   coldImage: {fileID: 1215630879}
   woodBurning: {fileID: 1162878752}
+--- !u!114 &660074663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba444375ed739044cb6be362a6035174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food: {fileID: 1811446892}
+  playerHunger: {fileID: 660074660}
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,

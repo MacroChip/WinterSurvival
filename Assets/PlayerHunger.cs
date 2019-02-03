@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHunger : MonoBehaviour
 {
+    private const int MAXIMUM_FULLNESS = 100;
     private const int STARTING_FULLNESS = 100;
     public int fullness;
     public int hungerPerTime;
@@ -30,6 +31,12 @@ public class PlayerHunger : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void Feed(int amount)
+    {
+        fullness = System.Math.Min(MAXIMUM_FULLNESS, fullness + amount);
+        hungerGauge.value = fullness;
     }
 
     private void Die()
