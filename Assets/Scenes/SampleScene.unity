@@ -2344,6 +2344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wood: 0
   storedWoodText: {fileID: 24508968}
+  woodObject: {fileID: 2139282499}
 --- !u!114 &660074662
 MonoBehaviour:
   m_ObjectHideFlags: 0

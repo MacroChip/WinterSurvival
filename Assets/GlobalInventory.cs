@@ -7,6 +7,14 @@ public class GlobalInventory : MonoBehaviour
 {
     public int wood;
     public TMPro.TMP_Text storedWoodText;
+    public GameObject woodObject;
+
+    private StoredWoodSpawner StoredWoodSpawner;
+
+    void Awake()
+    {
+        StoredWoodSpawner = new StoredWoodSpawner(woodObject);
+    }
 
     public void DepositResources(ResourceInventory fromResourceInventory)
     {
@@ -15,6 +23,7 @@ public class GlobalInventory : MonoBehaviour
         fromResourceInventory.ClearWood();
         UpdateStoredWoodUI();
         Debug.Log("Deposited " + newWoodCount + " wood to the global inventory");
+        StoredWoodSpawner.Spawn(newWoodCount);
     }
 
     internal void DecrementWood(int numberOfWoodBurnedPerTick)
