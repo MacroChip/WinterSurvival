@@ -2362,7 +2362,7 @@ MonoBehaviour:
   currentTemp: 0
   tempGauge: {fileID: 2089007865}
   coldImage: {fileID: 1215630879}
-  woodBurning: {fileID: 1162878752}
+  woodBurning: {fileID: 1614841883}
 --- !u!114 &660074663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3967,54 +3967,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
---- !u!1 &1162878751
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1162878753}
-  - component: {fileID: 1162878752}
-  m_Layer: 0
-  m_Name: WoodBurning
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1162878752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162878751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b829059d5bb90f428f7dc7e7f02a7c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenBurns: 30
-  numberOfWoodBurnedPerTick: 1
-  globalInventory: {fileID: 660074661}
-  fireSound: {fileID: 723613644}
-  fireLight: {fileID: 1611529384}
---- !u!4 &1162878753
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162878751}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250.35588, y: 50.02035, z: 274.96634}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1183727385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
@@ -5498,6 +5450,43 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0dfdee785f296bb45bde427eb3c7d746, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2520bde8b6885ff418e7c7d86841bdd1, type: 3}
+--- !u!1 &1614841881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2520bde8b6885ff418e7c7d86841bdd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1614841880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1614841882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614841881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.2, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1614841883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614841881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b829059d5bb90f428f7dc7e7f02a7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenBurns: 30
+  numberOfWoodBurnedPerTick: 1
+  globalInventory: {fileID: 660074661}
+  fireSound: {fileID: 723613644}
+  fireLight: {fileID: 1611529384}
+  wood: {fileID: 2139282499}
 --- !u!1001 &1637752840
 PrefabInstance:
   m_ObjectHideFlags: 0
