@@ -2376,6 +2376,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food: {fileID: 1811446892}
   playerHunger: {fileID: 660074660}
+--- !u!114 &660074667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660074654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ff23e269b12e44cb73f5caf69ea728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingItem: {fileID: 1411916715, guid: 580977036553db04b9867338d4e08ba4, type: 3}
 --- !u!4 &660758194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 70417e08343ef354db9a6c398faf67bc,
