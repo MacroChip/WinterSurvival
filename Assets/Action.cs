@@ -8,14 +8,21 @@ public class Action : MonoBehaviour
     public Transform actionAnimation;
 
     private float lastFiredTime = -FIRE_STARTER_SECONDS_BETWEEN_SHOTS;
+    private ParticleSystem animationParticleSystem;
+
+    void Start()
+    {
+        Transform animationObject = Instantiate(actionAnimation, gameObject.transform);
+        animationObject.transform.rotation *= Quaternion.Euler(90, 0, 0);
+        animationParticleSystem = animationObject.GetComponent<ParticleSystem>();
+    }
 
     void Update()
     {
         if(Input.GetButton("Fire1") && Time.time - lastFiredTime >= FIRE_STARTER_SECONDS_BETWEEN_SHOTS)
         {
             lastFiredTime = Time.time;
-            Transform animation = Instantiate(actionAnimation, gameObject.transform);
-            animation.transform.rotation *= Quaternion.Euler(90, 0, 0);
+            animationParticleSystem.Play();
         }
     }
 }
