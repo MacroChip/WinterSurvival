@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1411916715}
   - component: {fileID: 1411916714}
   - component: {fileID: 1411916713}
+  - component: {fileID: 6206692778294349591}
   m_Layer: 0
-  m_Name: striker
+  m_Name: flintFireStarter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6206692778294349591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411916712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf2b0c36cecc574e8e45469f1d31a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionAnimation: {fileID: 4000012832170722, guid: 96b2ec0239d11fa4b9792311efceb8ed,
+    type: 3}
