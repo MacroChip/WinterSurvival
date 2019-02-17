@@ -16,7 +16,6 @@ public class WoodBurning : MonoBehaviour
     {
         isLit = false;
         fireLight.enabled = false;
-        InvokeRepeating("ConsumeWood", 10f, timeBetweenBurns);
     }
 
     void ConsumeWood()
@@ -27,20 +26,20 @@ public class WoodBurning : MonoBehaviour
             ExtinguishFire();
         } else
         {
-            if (!isLit)
-            {
-                Debug.Log("Igniting fire");
-                LightMyFire();
-            }
             globalInventory.DecrementWood(numberOfWoodBurnedPerTick);
         }
     }
 
-    private void LightMyFire()
+    public void LightMyFire()
     {
-        isLit = true;
-        fireSound.Play();
-        fireLight.enabled = true;
+        if (globalInventory.wood - numberOfWoodBurnedPerTick >= 0 && !IsInvoking("ConsumeWood"))
+        {
+            Debug.Log("Igniting fire");
+            isLit = true;
+            fireSound.Play();
+            fireLight.enabled = true;
+            InvokeRepeating("ConsumeWood", timeBetweenBurns, timeBetweenBurns);
+        }
     }
 
     private void ExtinguishFire()
@@ -48,6 +47,7 @@ public class WoodBurning : MonoBehaviour
         isLit = false;
         fireSound.Stop();
         fireLight.enabled = false;
+        CancelInvoke("ConsumeWood");
     }
 
     internal bool IsLit()
