@@ -27,6 +27,7 @@ public class Action : MonoBehaviour
         {
             lastFiredTime = Time.time;
             animationParticleSystem.Play();
+            GetComponent<AudioSource>().Play();
             if (Vector3.Distance(gameObject.transform.position, stove.transform.position) <= 3)
             {
                 woodBurning.LightMyFire();
